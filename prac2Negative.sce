@@ -1,0 +1,9 @@
+//2a
+im=imread("C:\SemV\DIP\A.jpg");
+subplot(1,2,1);
+title("Original");
+imshow(im);
+neg=255-im;
+subplot(1,2,2);
+title("Negative");
+imshow(neg);

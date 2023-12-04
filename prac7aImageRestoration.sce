@@ -1,0 +1,22 @@
+//7a. image restoration
+im=imread("C:\SemV\DIP\Dp1.jpeg");
+af=fspecial('gaussian',[3,3],0.5);
+afl=fspecial('log',[3,3],0.5);
+afs=fspecial('sobel');
+aflp=fspecial('laplacian',0.2);
+figure();
+title("Original Image");
+imshow(im);
+figure();
+subplot(2,2,1);
+title("Filtered Image - Guassian Filter");
+imshow(imfilter(im,af));
+subplot(2,2,2);
+title("Log Filter");
+imshow(imfilter(im,afl));
+subplot(2,2,3);
+title("Sobel Filter");
+imshow(imfilter(im,afs));
+subplot(2,2,4);
+title("Laplacian Filter");
+imshow(imfilter(im,aflp));
